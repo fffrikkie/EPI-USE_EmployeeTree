@@ -24,3 +24,10 @@ To implement this technical assignment I made use of Angular, with Angular Mater
 ### Bugs
 
 * If a user logs out and then logs back in immediately, the hierarchy will not display correctly but it is fixed once the page is refreshed. The user is still able to correctly add, edit and delete schedule items.
+
+
+## Architecture
+
+![ArchitevtureDiagram](https://user-images.githubusercontent.com/93199902/185946555-53f7d7fc-c1da-4022-b362-b0696faf7976.jpg)
+
+## Setup
