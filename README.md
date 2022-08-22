@@ -58,4 +58,14 @@ To implement this technical assignment I made use of Angular, with Angular Mater
 
 ![manageSchedule](https://user-images.githubusercontent.com/93199902/185973207-03c1de4e-8ca8-47e8-ab93-ebbd9f6b215f.png)
 
+### MANAGE SCHEDULE (ADD ITEM)
 
+![addItem](https://user-images.githubusercontent.com/93199902/185975863-9e66bd00-93f5-4eb6-8576-90ed672b026b.png)
+
+### MANAGE SCHEDULE (EDIT ITEM AND VIEW OTHER EMPLOYEE SCHEDULE)
+
+![subEdit](https://user-images.githubusercontent.com/93199902/185976070-1f01f5e4-6bc2-48d0-89c8-82b4eadd77ab.png)
+
+### LOGOUT
+
+![logout](https://user-images.githubusercontent.com/93199902/185976147-8ca4c0b5-706f-494a-8cb9-0f2f82fd08dd.png)
