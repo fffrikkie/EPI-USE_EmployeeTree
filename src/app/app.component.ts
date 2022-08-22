@@ -7,7 +7,5 @@ import { Firestore } from '@angular/fire/firestore';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EPI-USE EmployeeTree';
-
   constructor(private fireStore: Firestore) {}
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import {MatTreeNestedDataSource} from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
+import { Router } from '@angular/router';
 
 interface EmpNode {
   title: string;
@@ -23,7 +24,13 @@ export class HierarchyScreenComponent implements OnInit {
   treeControl = new NestedTreeControl<EmpNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<EmpNode>();
 
-  constructor(private serviceDing : DataService) {
+  constructor(private serviceDing : DataService, private router: Router) {
+    let x = document.cookie;
+    console.log("COOKIE: "+x);
+    if (x === "") {
+      this.router.navigateByUrl('/login');
+      return;
+    }
     const temp = this.serviceDing.addData();
 
     temp.then(() => {

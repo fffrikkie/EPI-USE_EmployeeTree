@@ -6,9 +6,10 @@ import { ManageScheduleScreenComponent } from "./manage-schedule-screen/manage-s
 import { LoginComponent } from "./login/login.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent},
-  { path: 'hierarchy', component: HomePageComponent},
-  { path: 'manage-schedule', component: HomePageComponent},
+  { path: 'hierarchy', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'manage-schedule', redirectTo: '/home', pathMatch: 'full'},
   { path: 'login', component: LoginComponent}
 ];
 

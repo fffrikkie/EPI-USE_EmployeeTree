@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms";
+import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -11,11 +12,14 @@ export class LoginComponent implements OnInit {
   username = new FormControl('');
   password = new FormControl('');
 
-  constructor(private service : DataService) { }
+  constructor(private service : DataService, private router: Router) {
+    let x = document.cookie;
+    if (x !== "") {
+      this.router.navigateByUrl('home');
+    }
+  }
 
   ngOnInit(): void {
-    let x = document.cookie;
-    console.log("LOGIN COOKIE: "+x)
   }
 
   public login() {

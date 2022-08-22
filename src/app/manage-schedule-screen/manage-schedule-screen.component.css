@@ -4,4 +4,12 @@ table {
 
 .demo-row-is-clicked {
     font-weight: bold;
-  }
+}
+
+#subCard {
+    margin-top: 1rem;
+}
+
+#subIDin {
+     margin-right: 1rem;
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 export interface scheduleItem {
@@ -22,7 +23,13 @@ export class ManageScheduleScreenComponent implements OnInit {
   displayedColumns: string[] = ['title', 'start', 'end', 'description'];
   dataSource = SCHEDULE_DATA;
   dataSubSource = new MatTableDataSource<scheduleItem[]>();
-  constructor(private service: DataService, private _snackBar: MatSnackBar) {
+  constructor(private service: DataService, private _snackBar: MatSnackBar, private router: Router) {
+    let x = document.cookie;
+    console.log("COOKIE: "+x);
+    if (x === "") {
+      this.router.navigateByUrl('/login');
+      return;
+    }
     let temp = this.service.loadSchedule();
     temp.then(() => {
       let tempArr : any[] = arguments[0].allUsers;

@@ -18,6 +18,7 @@ import { MatTableModule } from '@angular/material/table'
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -29,6 +30,7 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AngularFireModule} from '@angular/fire/compat'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     LoginComponent,
     HomePageComponent,
     HierarchyScreenComponent,
-    ManageScheduleScreenComponent
+    ManageScheduleScreenComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatButtonModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatToolbarModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
