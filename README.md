@@ -31,3 +31,10 @@ To implement this technical assignment I made use of Angular, with Angular Mater
 ![ArchitevtureDiagram](https://user-images.githubusercontent.com/93199902/185946555-53f7d7fc-c1da-4022-b362-b0696faf7976.jpg)
 
 ## Setup
+
+* Clone the repo in a folder on your system.
+* Change directories to the EPI-USE_EmployeeTree (`cd EPI-USE_EmployeeTree` if you cloned the repository using a terminal)
+* Switch to the master branch with `git checkout master`
+* Type `npm install` and wait for the necessary packages to install.
+* Then type `ng serve` to host the web app on your localhost.
+* If it compiled successfully, type `localhost:4200` in your web browser's URL bar.
