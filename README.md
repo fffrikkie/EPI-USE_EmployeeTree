@@ -1,6 +1,9 @@
 # EPI-USE_EmployeeTree
+
+The code for can be found on the master branch.
+
 ## Overview
-To implement this technical assignment I made use of Angular, with Angular Material, and Firebase's cloud storage called Firestore. Users are able to login, view their hierarchy and edit their own schedule as well as employees that report to them. 
+To implement this technical assignment I made use of Angular, with Angular Material, and Firebase's cloud storage called Firestore. Users are able to login, view their hierarchy and edit their own schedule as well as employees that report to them. A user that isn't logged in won't have access to the features provided.
 
 ### Functionality
 
@@ -17,7 +20,8 @@ To implement this technical assignment I made use of Angular, with Angular Mater
   - This will display that employee's schedule in a table where the user can add, edit and delete items.
   - If the employee ID the user entered is not the ID of an employee reporting to them then no schedule will be displayed.
   - Users can thus only edit their own schedule and the schedule of employees reporting to them.
-  - When changes are made to the user's schedule the page will refresh and once the user goes back to the Manage Schedule Screen, the changes will be visible. For changes made to employees working under the user, the employee's ID will need to be entered again to view the changes. 
+  - When changes are made to the user's schedule the page will refresh and once the user goes back to the Manage Schedule Screen, the changes will be visible. For changes made to employees working under the user, the employee's ID will need to be entered again to view the changes.
+  - For the Edit Item and Delete Item buttons to become enabled the user needs to click on a schedule item in the table.
 * To logout the user needs to go to the Logout screen and click the Logout button.
   - If the user logs out, they won't be able to access the other pages of the website.
 
