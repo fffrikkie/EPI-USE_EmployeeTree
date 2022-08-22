@@ -26,7 +26,6 @@ export class HierarchyScreenComponent implements OnInit {
 
   constructor(private serviceDing : DataService, private router: Router) {
     let x = document.cookie;
-    console.log("COOKIE: "+x);
     if (x === "") {
       this.router.navigateByUrl('/login');
       return;

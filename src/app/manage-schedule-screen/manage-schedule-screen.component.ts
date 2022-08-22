@@ -25,7 +25,6 @@ export class ManageScheduleScreenComponent implements OnInit {
   dataSubSource = new MatTableDataSource<scheduleItem[]>();
   constructor(private service: DataService, private _snackBar: MatSnackBar, private router: Router) {
     let x = document.cookie;
-    console.log("COOKIE: "+x);
     if (x === "") {
       this.router.navigateByUrl('/login');
       return;

@@ -11,7 +11,6 @@ export class HomePageComponent implements OnInit {
 
   constructor(private service : DataService, private router: Router) {
     let x = document.cookie;
-    console.log("COOKIE: "+x);
     if (x === "") {
       this.router.navigateByUrl('/login');
       return;
