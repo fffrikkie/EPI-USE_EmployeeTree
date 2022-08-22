@@ -1,0 +1,161 @@
+<mat-card>
+    <mat-card-title>Your Schedule</mat-card-title>
+    <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+              <!-- Name Column -->
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="start">
+                <th mat-header-cell *matHeaderCellDef> Start Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.start_time}} </td>
+              </ng-container>
+            
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="end">
+                <th mat-header-cell *matHeaderCellDef> End Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.end_time}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr
+                mat-row 
+                (click)="addRowSched(row)"
+                [class.demo-row-is-clicked]="clickedRows.has(row)"
+                *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+        </table>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="showIns()">Add Item</button>
+        <button id="editBtn" mat-raised-button color="accent" [disabled]="clickedRows.size === 0" (click)="showEdit()">Edit Item</button>
+        <button id="delBtn" mat-raised-button color="warn" [disabled]="clickedRows.size === 0" (click)="delItem()">Delete Item</button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+        <div id="cFooterA" hidden="true">
+            <label for="title">Title: </label>
+            <input id="titleIn" type="text" [formControl]="titleIn">
+            <br>
+            <label for="descriptionIn">Description: </label>
+            <input id="descriptionIn" type="text" [formControl]="descriptionIn">
+            <br>
+            <label for="descriptionIn">Start Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="startIn">
+            <br>
+            <label for="descriptionIn">End Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="endIn">
+            <br>
+            <button type="submit" (click)="addSchedItem()">Add Schedule</button>
+        </div>
+
+        <div id="cFooterE" hidden="true">
+            <label for="title">Title: </label>
+            <input id="titleIn" type="text" [formControl]="selectTitle">
+            <br>
+            <label for="descriptionIn">Description: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectDescription">
+            <br>
+            <label for="descriptionIn">Start Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectStart">
+            <br>
+            <label for="descriptionIn">End Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectEnd">
+            <br>
+            <button type="submit" (click)="editItem()">Edit Schedule</button>
+        </div>
+    </mat-card-footer>
+</mat-card>
+
+
+
+
+<mat-card>
+    <mat-card-title>Suboordinate Schedule</mat-card-title>
+    <mat-card-content>
+        <label for="subID">Enter employee ID: </label>
+        <input id="subIDin" type="text" [formControl]="subIDin">
+        <button mat-raised-button color="primary" (click)="loadSubData()">View Employee</button>
+        <table mat-table [dataSource]="dataSubSource" class="mat-elevation-z8">
+              <!-- Name Column -->
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="start">
+                <th mat-header-cell *matHeaderCellDef> Start Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.start_time}} </td>
+              </ng-container>
+            
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="end">
+                <th mat-header-cell *matHeaderCellDef> End Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.end_time}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr
+                mat-row 
+                (click)="addSubRowSched(row)"
+                [class.demo-row-is-clicked]="clickedSubRows.has(row)"
+                *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+        </table>
+    </mat-card-content>
+    
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="showSubIns()">Add Item</button>
+        <button id="editBtn" mat-raised-button color="accent" [disabled]="clickedSubRows.size === 0" (click)="showSubEdit()">Edit Item</button>
+        <button id="delBtn" mat-raised-button color="warn" [disabled]="clickedSubRows.size === 0" (click)="delSubItem()">Delete Item</button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+        <div id="cFooterSA" hidden="true">
+            <label for="titleSubIn">Title: </label>
+            <input id="titleSubIn" type="text" [formControl]="titleSubIn">
+            <br>
+            <label for="descriptionSubIn">Description: </label>
+            <input id="descriptionSubIn" type="text" [formControl]="descriptionSubIn">
+            <br>
+            <label for="descriptionSubIn">Start Time: </label>
+            <input id="descriptionSubIn" type="text" [formControl]="startSubIn">
+            <br>
+            <label for="descriptionSubIn">End Time: </label>
+            <input id="descriptionSubIn" type="text" [formControl]="endSubIn">
+            <br>
+            <button type="submit" (click)="addSubSchedItem()">Add Schedule</button>
+        </div>
+
+        <div id="cFooterSE" hidden="true">
+            <label for="title">Title: </label>
+            <input id="titleIn" type="text" [formControl]="selectSubTitle">
+            <br>
+            <label for="descriptionIn">Description: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectSubDescription">
+            <br>
+            <label for="descriptionIn">Start Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectSubStart">
+            <br>
+            <label for="descriptionIn">End Time: </label>
+            <input id="descriptionIn" type="text" [formControl]="selectSubEnd">
+            <br>
+            <button type="submit" (click)="editSubItem()">Edit Schedule</button>
+        </div>
+    </mat-card-footer>
+</mat-card>

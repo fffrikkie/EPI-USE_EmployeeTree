@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "epiuse-employeetree": {
+      "hosting": {
+        "EPI-USE_EmployeeTree": [
+          "epiuse-employeetree"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "epiuse-employeetree"
+  }
+}

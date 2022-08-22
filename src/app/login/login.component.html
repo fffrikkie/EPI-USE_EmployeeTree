@@ -1,0 +1,10 @@
+<div>
+    <label for="username">Username: </label>
+    <input id="username" type="text" [formControl]="username">
+    <br>
+    <label for="password">Password: </label>
+    <input id="password" type="password" [formControl]="password">
+    <br>
+    <label id="isValid" hidden="true">Username or password is incorrect!<br></label>
+    <button type="submit" (click)="login()">Login</button>
+</div>
