@@ -1,6 +1,6 @@
 # EPI-USE_EmployeeTree
 
-The code for can be found on the master branch.
+The files and code can be found on the master branch.
 
 ## Overview
 To implement this technical assignment I made use of Angular, with Angular Material, and Firebase's cloud storage called Firestore. Users are able to login, view their hierarchy and edit their own schedule as well as employees that report to them. A user that isn't logged in won't have access to the features provided.
