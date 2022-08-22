@@ -38,3 +38,24 @@ To implement this technical assignment I made use of Angular, with Angular Mater
 * Type `npm install` and wait for the necessary packages to install.
 * Then type `ng serve` to host the web app on your localhost.
 * If it compiled successfully, type `localhost:4200` in your web browser's URL bar.
+
+## Screenshots
+
+### LOGIN
+
+![login](https://user-images.githubusercontent.com/93199902/185972641-983831de-ebb1-40f5-b9dd-2d8d7b11b6ce.png)
+
+### HOME
+
+![home](https://user-images.githubusercontent.com/93199902/185972791-5bb0ce15-0104-4f9a-9c3d-2bc53db5f7d3.png)
+
+### HIERARCHY (EXPANDED)
+
+![hierarchy](https://user-images.githubusercontent.com/93199902/185972970-cef84214-38f9-45e1-837e-08fd7b03b7c3.png)
+
+
+### MANAGE SCHEDULE
+
+![manageSchedule](https://user-images.githubusercontent.com/93199902/185973207-03c1de4e-8ca8-47e8-ab93-ebbd9f6b215f.png)
+
+
