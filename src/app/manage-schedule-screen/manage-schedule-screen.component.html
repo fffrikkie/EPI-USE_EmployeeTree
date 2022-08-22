@@ -44,34 +44,42 @@
     <mat-card-footer>
         <div id="cFooterA" hidden="true">
             <label for="title">Title: </label>
+            <br>
             <input id="titleIn" type="text" [formControl]="titleIn">
             <br>
             <label for="descriptionIn">Description: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="descriptionIn">
             <br>
             <label for="descriptionIn">Start Time: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="startIn">
             <br>
             <label for="descriptionIn">End Time: </label>
-            <input id="descriptionIn" type="text" [formControl]="endIn">
             <br>
-            <button type="submit" (click)="addSchedItem()">Add Schedule</button>
+            <input id="descriptionIn" type="text" [formControl]="endIn">
+            <br><br>
+            <button mat-flat-button color="accent" type="submit" (click)="addSchedItem()">Add Schedule</button>
         </div>
 
         <div id="cFooterE" hidden="true">
             <label for="title">Title: </label>
+            <br>
             <input id="titleIn" type="text" [formControl]="selectTitle">
             <br>
             <label for="descriptionIn">Description: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="selectDescription">
             <br>
             <label for="descriptionIn">Start Time: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="selectStart">
             <br>
             <label for="descriptionIn">End Time: </label>
-            <input id="descriptionIn" type="text" [formControl]="selectEnd">
             <br>
-            <button type="submit" (click)="editItem()">Edit Schedule</button>
+            <input id="descriptionIn" type="text" [formControl]="selectEnd">
+            <br><br>
+            <button mat-flat-button color="accent" type="submit" (click)="editItem()">Edit Schedule</button>
         </div>
     </mat-card-footer>
 </mat-card>
@@ -128,34 +136,42 @@
     <mat-card-footer>
         <div id="cFooterSA" hidden="true">
             <label for="titleSubIn">Title: </label>
+            <br>
             <input id="titleSubIn" type="text" [formControl]="titleSubIn">
             <br>
             <label for="descriptionSubIn">Description: </label>
+            <br>
             <input id="descriptionSubIn" type="text" [formControl]="descriptionSubIn">
             <br>
             <label for="descriptionSubIn">Start Time: </label>
+            <br>
             <input id="descriptionSubIn" type="text" [formControl]="startSubIn">
             <br>
             <label for="descriptionSubIn">End Time: </label>
-            <input id="descriptionSubIn" type="text" [formControl]="endSubIn">
             <br>
-            <button type="submit" (click)="addSubSchedItem()">Add Schedule</button>
+            <input id="descriptionSubIn" type="text" [formControl]="endSubIn">
+            <br><br>
+            <button mat-flat-button color="accent" type="submit" (click)="addSubSchedItem()">Add Schedule</button>
         </div>
 
         <div id="cFooterSE" hidden="true">
             <label for="title">Title: </label>
+            <br>
             <input id="titleIn" type="text" [formControl]="selectSubTitle">
             <br>
             <label for="descriptionIn">Description: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="selectSubDescription">
             <br>
             <label for="descriptionIn">Start Time: </label>
+            <br>
             <input id="descriptionIn" type="text" [formControl]="selectSubStart">
             <br>
             <label for="descriptionIn">End Time: </label>
-            <input id="descriptionIn" type="text" [formControl]="selectSubEnd">
             <br>
-            <button type="submit" (click)="editSubItem()">Edit Schedule</button>
+            <input id="descriptionIn" type="text" [formControl]="selectSubEnd">
+            <br><br>
+            <button mat-flat-button color="accent" type="submit" (click)="editSubItem()">Edit Schedule</button>
         </div>
     </mat-card-footer>
 </mat-card>

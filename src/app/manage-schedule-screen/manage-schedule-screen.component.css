@@ -13,3 +13,7 @@ table {
 #subIDin {
      margin-right: 1rem;
 }
+
+#cFooterA, #cFooterE, #cFooterSA, #cFooterSE {
+    padding: 1rem;
+}
