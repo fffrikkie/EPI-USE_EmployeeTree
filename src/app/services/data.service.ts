@@ -93,6 +93,7 @@ export class DataService {
   logout() {
     document.cookie = "empID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     this.router.navigateByUrl('/login');
+    this.allUsers = [];
     // window.location.reload();
   }
 

@@ -30,8 +30,8 @@ export class HierarchyScreenComponent implements OnInit {
       this.router.navigateByUrl('/login');
       return;
     }
+    TREE_DATA.pop();
     const temp = this.serviceDing.addData();
-
     temp.then(() => {
       let x = document.cookie;
       let empID = x.substring(6, x.length);
