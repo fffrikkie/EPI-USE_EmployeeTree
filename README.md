@@ -25,11 +25,6 @@ To implement this technical assignment I made use of Angular, with Angular Mater
 * To logout the user needs to go to the Logout screen and click the Logout button.
   - If the user logs out, they won't be able to access the other pages of the website.
 
-### Bugs
-
-* If a user logs out and then logs back in immediately, the hierarchy will not display correctly but it is fixed once the page is refreshed. The user is still able to correctly add, edit and delete schedule items.
-
-
 ## Architecture
 
 ![ArchitevtureDiagram](https://user-images.githubusercontent.com/93199902/185946555-53f7d7fc-c1da-4022-b362-b0696faf7976.jpg)
